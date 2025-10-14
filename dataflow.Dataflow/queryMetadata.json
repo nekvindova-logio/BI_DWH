@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "dataflow",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "table": {
+      "queryId": "709924cc-f7de-4d88-8b67-e1d92c4a3c9f",
+      "queryName": "table",
+      "loadEnabled": false
+    },
+    "table_DataDestination": {
+      "queryId": "2b85f0f2-8c27-463f-8a2a-8cc442a9c731",
+      "queryName": "table_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://czlogio-my.sharepoint.com/personal/nekvindova_logio_cz/",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"272e43e3-a702-47be-9445-49c1cd0291fb\",\"DatasourceId\":\"b6ee948c-a411-49bd-a9a5-7360a1f22112\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"272e43e3-a702-47be-9445-49c1cd0291fb\",\"DatasourceId\":\"c5b22925-4988-4874-a9c9-0778ed6f31f3\"}"
+    }
+  ]
+}
