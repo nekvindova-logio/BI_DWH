@@ -5,9 +5,10 @@ shared table = let
   Source = Excel.Workbook(Web.Contents("https://czlogio-my.sharepoint.com/personal/nekvindova_logio_cz/Documents/movement_type.xlsx"), null, true),
   #"Navigation 1" = Source{[Item = "List1", Kind = "Sheet"]}[Data],
   #"Changed column type" = Table.TransformColumnTypes(#"Navigation 1", {{"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}}),
-  #"Promoted headers" = Table.PromoteHeaders(#"Changed column type", [PromoteAllScalars = true])
+  #"Promoted headers" = Table.PromoteHeaders(#"Changed column type", [PromoteAllScalars = true]),
+  #"Removed columns" = Table.RemoveColumns(#"Promoted headers", {"sign"})
 in
-  #"Promoted headers";
+  #"Removed columns";
 shared table_DataDestination = let
   Pattern = Lakehouse.Contents([CreateNavigationProperties = false, EnableFolding = false]),
   Navigation_1 = Pattern{[workspaceId = "5e82cc10-1831-42a4-9172-41fe6831634d"]}[Data],
