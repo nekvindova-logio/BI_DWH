@@ -1,0 +1,4 @@
+relationship 99f8489a-ff50-36d5-d2b8-f4180845afbb
+	fromColumn: table.description
+	toColumn: table_2.description
+

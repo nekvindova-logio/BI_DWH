@@ -1,0 +1,37 @@
+table table
+	lineageTag: 824d01b7-5533-439b-a195-ea346fb25406
+	sourceLineageTag: [dbo].[table]
+
+	column movement_description
+		dataType: string
+		lineageTag: 95a9ef79-b2ec-47da-b194-5de05e7295aa
+		sourceLineageTag: movement_description
+		summarizeBy: none
+		sourceColumn: movement_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column movement_type
+		dataType: string
+		lineageTag: b24f1c90-3a1f-4208-9896-4d4d13374312
+		sourceLineageTag: movement_type
+		summarizeBy: none
+		sourceColumn: movement_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: e1dc32ab-7672-4d83-9869-c02dcdb33138
+		sourceLineageTag: description
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition table = entity
+		mode: directLake
+		source
+			entityName: table
+			expressionSource: 'DirectLake - lakehouse'
+
